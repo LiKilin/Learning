@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+	<!-- <meta  http-equiv="X-UA-Conpatible"  content="IE-Edge"> -->
+	<style>
+	div{
+		margin:0px auto;
+		width:100px;height:180px;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<img  id = "light" src="images/light.png">
+		<input type="button"  id="btn" onclick="changeImage()" value="open" >
+	</div>
+<script>
+function changeImage()
+{
+	var btn = document.getElementById('btn');
+	var ele=document.getElementById('light');
+if (btn.value =="close")
+  {
+  ele.src="images/light.png";
+  btn.value ="open";
+  }
+
+else
+  {
+  ele.src="images/light-open.png";
+  	btn.value="close";
+  }
+}
+</script>
+
+
+</body>
+</html>
