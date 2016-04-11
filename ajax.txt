@@ -1,0 +1,5 @@
+XMLHttpRequest对象(异步的与服务器交换数据）
+JavaScript/DOM(信息显示/交互）
+css（给数据定义样式）
+XML(作为转换数据的格式）
+AJAX应用程序与浏览器和平台无光。

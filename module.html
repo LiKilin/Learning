@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+	</style>
+</head>
+<body>
+        <div id="wrap"></div>
+	<script type="text/javascript">
+		var tempDate ={
+			"Data":[{
+				"eId":"123",
+				"dname":"dname11"
+			},{
+				"eId":"456",
+				"dname":"dname22"
+			}],
+			"Total":2
+		};
+		var config = {
+			column:[
+			{cDiv:'aa',id="aa"},
+			{cDiv:'bb',id="bb"},
+			{cDiv:'dd',id="cc"}
+			]
+		}
+		function createTable(_w,_c){
+			var _wrap = _w;
+			var _config = _c|| {};
+			for(var i=0; i<_config.column.length;i++){
+				$("<div/>",{
+					"id":tempData.Data[i].eId
+				}).html(function(){
+					$("<div>",{
+						'class':'exOpenBtn'
+					}).html('展开').appendTo($(this));
+					$("<div>",{
+						'class':'exOpenBtn'
+					}).html('内容内容---').appendTo($(this));
+
+					return "id":tempData.Data[i].dname
+
+				}).appendTo(_wrap);
+			}
+		}
+	</script>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+
+</body>
+</html>
