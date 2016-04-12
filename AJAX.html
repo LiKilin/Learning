@@ -17,27 +17,21 @@
 	<button type="button" onclick="loadXMLDoc()">修改内容</button>
 </div>
 <script>
-   function loadXMLDoc()
-{
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("aDiv1").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","ajax.txt",true);
-xmlhttp.send();
-}
+    function loadXMLDoc(){
+    	var xmlhttp;
+    	if(window.XMLHttpRequest){
+	xmlhttp =new XMLHttpRequest();// IE7+, Firefox, Chrome, Opera, Safari \
+    }else{
+		xmlhttp=new ActiveXObject("Microsoft XMLHTTP");//  IE6, IE5
+	}
+	xmlhttp.onreadystatechange=function(){
+		if(xmlhttp.readystate==4&&xmlhttp.status==200){
+			document.getElementById("aDiv1").innerHTML=xmlhttp.responseText;
+		}
+	}
+    xmlhttp.open("GET","ajax.txt",true);
+    xmlhttp.send();
+	   }
 </script>
 </body>
 </html>

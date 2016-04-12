@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="UTF-8"> 
+<title>找出重复最多的字符</title> 
+</head> 
+<body> 
+<p id="">找出str="aabbddeeeeefdxxxd"中重复最多的字符</p>
+<button onclick="fn()">找出重复最多的字符</button>
+<script type="text/javascript">
+   function fn(){
+    var str = "aabbddeeeeefdxxxd";
+    var arr=[];
+    var count=0;
+    var Cvalue;
+    for(var i=0;i<str.length;i++){
+        var k=str[i];
+         if(!arr[k]){
+            arr[k]=1;
+         }else{
+            arr[k]++;
+         }
+    }
+    for(var n in arr){
+        Cvalue =n;
+    }
+    document.write("最多是"+Cvalue+",次数"+count+"次");
+   } 
+
+   function fn1(){
+    var arr1=[1,2,2,3,3,5,7,6,4,4,5,3,7,6]
+    var arr=[];
+    var obj ={}
+    var index=0;
+     for(var i=0;i<arr1.length;i++){
+        var k = arr1[i];
+        if(!arr[k]){
+            obj=k;  
+        }
+     }
+     console.log(obj)
+   }
+</script>
+</body> 
+</html>
